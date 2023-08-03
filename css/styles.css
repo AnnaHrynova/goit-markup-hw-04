@@ -328,26 +328,29 @@ ul {
 }
 
 .circle {
-  border-radius: 50%;
-  background-color: var(--iris);
   height: 40px;
   width: 40px;
-  position: relative;
-  width: calc((100% - 3 * 24px) / 4);
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
 .circle-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background-color: var(--iris);
+}
+
+.circle-social:hover,
+.circle-social:focus {
+  background-color: var(--ocean);
 }
 
 .circle-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  fill: var(--cloud);
 }
 
 .team-title {
@@ -412,17 +415,8 @@ ul {
 }
 
 .customers-list-item {
-  /* width: calc((100% - 6 * 24px) / 5); */
-  width: 168px;
+  width: calc((100% - 6 * 24px) / 5);
   height: 88px;
-  border-radius: 4px;
-  border: 1px solid var(--lightslate);
-  position: relative;
-  transition-property: border;
-  transition-duration: 250ms;
-  transition-delay: 0;
-  transition-timing-function: ease;
-  border-radius: 4px;
 }
 
 .customers {
@@ -457,6 +451,12 @@ ul {
   align-items: center;
   justify-content: center;
   color: var(--lightslate);
+  border-radius: 4px;
+  border: 1px solid var(--lightslate);
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-delay: 0;
+  transition-timing-function: ease;
 }
 
 .rectangle-link:hover,
@@ -467,12 +467,7 @@ ul {
 }
 
 .rectangle-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* fill: currentColor; */
-  transform: translate(-50%, -50%);
-  fill: var(--lightslate);
+  fill: currentColor;
   transition-property: fill;
   transition-duration: 250ms;
   transition-delay: 0;
@@ -549,10 +544,6 @@ ul {
 } */
 
 .circle-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   fill: var(--cloud);
 }
 
@@ -665,23 +656,7 @@ ul {
   overflow: hidden;
 }
 
-.rows-cover {
-  position: absolute;
-  color: var(--cloud);
-  top: 0;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-  padding: 40px 32px;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: var(--iris);
-  height: 100%;
-  width: 100%;
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* .rows-cover-text {
+.rows-cover-text {
   color: var(--cloud);
   line-height: 1.5;
   letter-spacing: 0.32px;
@@ -696,7 +671,7 @@ ul {
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-} */
+}
 
 .rows-list {
   width: calc((100% - 48px) / 3);
