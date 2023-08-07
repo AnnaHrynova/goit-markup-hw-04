@@ -323,7 +323,6 @@ ul {
 .team-social {
   display: flex;
   gap: 24px;
-  margin: 0 16px;
   justify-content: center;
 }
 
